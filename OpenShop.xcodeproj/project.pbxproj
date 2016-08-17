@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B6DB7BE1D644D89003AF00F /* BFOnBoardingSignInController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6DB7BD1D644D89003AF00F /* BFOnBoardingSignInController.m */; };
 		1B8DABE11D640388000272B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B8DABE01D640388000272B0 /* GoogleService-Info.plist */; };
 		1B8DABE91D64096B000272B0 /* BFUMService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DABE81D64096B000272B0 /* BFUMService.m */; };
 		5B0841121BD3CF8300DC83E6 /* BFNCheckmarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0841101BD3CF8300DC83E6 /* BFNCheckmarkView.m */; };
@@ -319,6 +320,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B6DB7BC1D644D89003AF00F /* BFOnBoardingSignInController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFOnBoardingSignInController.h; sourceTree = "<group>"; };
+		1B6DB7BD1D644D89003AF00F /* BFOnBoardingSignInController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFOnBoardingSignInController.m; sourceTree = "<group>"; };
 		1B8DABE01D640388000272B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1B8DABE71D64096B000272B0 /* BFUMService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFUMService.h; sourceTree = "<group>"; };
 		1B8DABE81D64096B000272B0 /* BFUMService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFUMService.m; sourceTree = "<group>"; };
@@ -1300,6 +1303,8 @@
 				BB6633F11C308E90003F3B85 /* BFOnboardingLoginEmailViewController.m */,
 				BB6AC1181C31A07C0016863F /* BFOnboardingRegistrationViewController.h */,
 				BB6AC1191C31A07D0016863F /* BFOnboardingRegistrationViewController.m */,
+				1B6DB7BC1D644D89003AF00F /* BFOnBoardingSignInController.h */,
+				1B6DB7BD1D644D89003AF00F /* BFOnBoardingSignInController.m */,
 			);
 			name = Onboarding;
 			sourceTree = "<group>";
@@ -2288,6 +2293,7 @@
 				5BC082191BF26C2E003EB0F1 /* NSNotificationCenter+BFManagedNotificationObserver.m in Sources */,
 				BB81D9AE1C3ACD010051FA39 /* BFStaticCategoriesTableViewCellExtension.m in Sources */,
 				ADA112781C53D6160057D14A /* BFShippingViewController.m in Sources */,
+				1B6DB7BE1D644D89003AF00F /* BFOnBoardingSignInController.m in Sources */,
 				5B50F05A1C106DA90087725C /* BFDataRequestOrderItemInfo.m in Sources */,
 				ADA932221C55081000C5A5EB /* BFOrderSummaryAddressTableViewCellExtension.m in Sources */,
 				AD3938601C5CD20F00447E8A /* BFCart+CoreDataProperties.m in Sources */,

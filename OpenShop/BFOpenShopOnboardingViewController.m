@@ -11,6 +11,7 @@
 #import "NSObject+BFStoryboardInitialization.h"
 #import "BFOnboardingLoginContentViewController.h"
 #import "BFOnboardingLanguageContentViewController.h"
+#import "BFOnBoardingSignInController.h"
 #import "BFTabBarController.h"
 #import "BFAppDelegate.h"
 
@@ -42,13 +43,18 @@ static NSString *const tabBarSegueIdentifier = @"tabBarSegue";
 - (void)setDefaults {
     // properties
     self.viewControllers = @[
-                             [self BFN_mainStoryboardClassInstanceWithClass:[BFOnboardingLanguageContentViewController class]],
-                             [self BFN_mainStoryboardClassInstanceWithClass:[BFOnboardingLoginContentViewController class]]
+                             //[self BFN_mainStoryboardClassInstanceWithClass:[BFOnboardingLanguageContentViewController class]],
+                             //[self BFN_mainStoryboardClassInstanceWithClass:[BFOnboardingLoginContentViewController class]],
+                             [self BFN_mainStoryboardClassInstanceWithClass:[BFOnBoardingSignInController class]]
                              ];
     // filter out view controllers that should display just on first launch
+    
+    /*
     if(![[BFAppSessionInfo sharedInfo]firstLaunch]) {
         self.viewControllers = [self.viewControllers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"firstLaunch = false"]];
     }
+    */
+     
     // assign delegates
     [self.viewControllers makeObjectsPerformSelector:@selector(setDelegate:) withObject:self];
     // assign controller
