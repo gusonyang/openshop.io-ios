@@ -1922,6 +1922,7 @@
 				72DDF75216E7485F00887646 /* Resources */,
 				7C45C3229F37FDFC246E8BAD /* [CP] Embed Pods Frameworks */,
 				28A86DCA4DDBAAB9553611A6 /* [CP] Copy Pods Resources */,
+				84A73734B9B03E1426327213 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1961,9 +1962,6 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Business-Factory";
 				TargetAttributes = {
-					72DDF75316E7485F00887646 = {
-						DevelopmentTeam = GQR3VK8NBG;
-					};
 					AD2D32AA1C870C120091AE0E = {
 						CreatedOnToolsVersion = 7.2.1;
 						TestTargetID = 72DDF75316E7485F00887646;
@@ -2058,6 +2056,21 @@
 			inputPaths = (
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenShop/Pods-OpenShop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84A73734B9B03E1426327213 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2499,7 +2512,7 @@
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = businessfactory.openshop;
+				PRODUCT_BUNDLE_IDENTIFIER = shop.you0738.com;
 				PRODUCT_NAME = OpenShop;
 				PROVISIONING_PROFILE = "";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2525,7 +2538,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = businessfactory.openshop;
+				PRODUCT_BUNDLE_IDENTIFIER = shop.you0738.com;
 				PRODUCT_NAME = OpenShop;
 				PROVISIONING_PROFILE = "";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2667,7 +2680,7 @@
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = businessfactory.openshop;
+				PRODUCT_BUNDLE_IDENTIFIER = shop.you0738.com;
 				PRODUCT_NAME = OpenShop;
 				PROVISIONING_PROFILE = "";
 				VERSIONING_SYSTEM = "apple-generic";
