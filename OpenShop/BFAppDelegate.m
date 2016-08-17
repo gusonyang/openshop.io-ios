@@ -12,7 +12,8 @@
 #import "BFRootService.h"
 #import "BFPushNotificationService.h"
 #import "BFFacebookService.h"
-#import "BFGoogleService.h"
+// #import "BFGoogleService.h"
+#import "BFUMService.h"
 #import "BFCoreSpotlightService.h"
 #import "BFCrashLoggerService.h"
 
@@ -33,7 +34,8 @@
         _serviceDispatcher = [[BFServicesDispatcher alloc] initWithServices:@[
                                                                               [[BFRootService alloc] init],
                                                                               [[BFFacebookService alloc] init],
-                                                                              [[BFGoogleService alloc] init],
+                                                                              // [[BFGoogleService alloc] init],
+                                                                              [[BFUMService alloc] init],
                                                                               [[BFPushNotificationService alloc] init],
                                                                               [[BFCoreSpotlightService alloc] init],
                                                                               [[BFCrashLoggerService alloc] init]

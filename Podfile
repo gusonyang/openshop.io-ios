@@ -35,6 +35,7 @@ target 'OpenShop' do
 
     pod 'Google/Analytics'
     pod 'GoogleIDFASupport'
+    pod 'UMengAnalytics'
 
     pod 'Onboard', :git => 'https://github.com/Skornos/Onboard.git'
     pod 'AFNetworkActivityLogger', :git => 'https://github.com/AFNetworking/AFNetworkActivityLogger.git', :branch => '3_0_0'
