@@ -10,6 +10,7 @@
 #import "User.h"
 #import "BFTabBarController.h"
 #import "BFAppDelegate.h"
+#import "XCUser.h"
 
 @interface BFInitViewController ()
 
@@ -18,7 +19,7 @@
 /**
  * Launch screen delay (miliseconds).
  */
-static NSInteger const launchScreenDelay         = 1500;
+static NSInteger const launchScreenDelay         = 500;
 /**
  * Launch image name component.
  */
@@ -45,7 +46,7 @@ static NSString *const onboardingSegueIdentifier = @"onboardingSegue";
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    if(![User isLoggedIn]) {
+    if(![XCUser isLoggedIn]) {
         // login view controller
         [self performSegueWithIdentifier:onboardingSegueIdentifier sender:self afterDelay:launchScreenDelay];
     }

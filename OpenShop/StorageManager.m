@@ -560,7 +560,7 @@
 }
 
 - (NSString *)findTranslationStringWithKey:(NSString *)key defaultValue:(NSString *)defaultValue {
-    return key ? key : defaultValue;
+    return (key && ![key isEqual:@""]) ? key : defaultValue;
     //return [self findTranslationStringWithLanguage:[[BFAppPreferences sharedPreferences]selectedLanguage] key:key defaultValue:defaultValue];
 }
 

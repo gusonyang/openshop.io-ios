@@ -14,6 +14,7 @@
 #import "User.h"
 #import "UIWindow+BFOverlays.h"
 #import "BFKeyboardToolbar.h"
+#import "XCUser.h"
 
 /**
  * Content view layout change animation duration.
@@ -347,16 +348,35 @@ static CGFloat const layoutChangeAnimationDuration = 0.4;
 }
 
 - (void)tryToLogin {
-    if (self.emailTextField.text.length && self.passwordTextField.text.length && [self.emailTextField.text isValidEmail]) {
+    if (self.emailTextField.text.length && self.passwordTextField.text.length) {
         [self.view.window showIndeterminateSmallProgressOverlayWithTitle:BFLocalizedString(kTranslationLoggingIn, @"Logging in") animated:YES];
         
         // logout current user
-        [[User sharedUser] logout];
+        [[XCUser sharedUser] logout];
         
         // user info
-        BFAPIRequestUserInfo *userInfo = [[BFAPIRequestUserInfo alloc]initWithEmail:self.emailTextField.text password:self.passwordTextField.text];
-        
         __weak __typeof__(self) weakSelf = self;
+        [XCUser login:@{@"username": self.emailTextField.text, @"password": self.passwordTextField.text} :^(id JSON, NSError *error) {
+            [weakSelf.view.window dismissAllOverlaysWithCompletion:^{
+                __weak __typeof__(self) strongSelf = weakSelf;
+                
+                if(!error){
+                    BOOL success = [JSON valueForKeyPath:@"success"];
+                    if(success){
+                        [[XCUser sharedUser] loginSuccess:[JSON objectForKey:@"data"]];
+                        
+                        [strongSelf dismissFormSheetWithCompletionHandler:nil animated:YES];
+                        return;
+                    }
+                }
+                
+                BFError *customError = [BFError errorWithCode:BFErrorCodeUserLogin];
+                [customError showAlertFromSender:strongSelf];
+            } animated:YES];
+        }];
+        
+        /*
+        BFAPIRequestUserInfo *userInfo = [[BFAPIRequestUserInfo alloc]initWithEmail:self.emailTextField.text password:self.passwordTextField.text];
         [[BFAPIManager sharedManager]loginUserWithInfo:userInfo completionBlock:^(id  _Nullable response, NSError * _Nullable error) {
             [weakSelf.view.window dismissAllOverlaysWithCompletion:^{
                 __weak __typeof__(self) strongSelf = weakSelf;
@@ -377,6 +397,7 @@ static CGFloat const layoutChangeAnimationDuration = 0.4;
                 }
             } animated:YES];
         }];
+        */
     }
     // invalid input
     else {

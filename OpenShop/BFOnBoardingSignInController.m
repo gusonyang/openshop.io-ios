@@ -15,6 +15,7 @@
 #import "UIWindow+BFOverlays.h"
 #import "UIColor+BFColor.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import "XCUser.h"
 
 /**
  * Content height.
@@ -79,7 +80,7 @@ static CGFloat const contentViewFadeInDuration = 0.5;
         };
         
         formSheetController.presentationController.dismissalTransitionDidEndCompletionHandler = ^(UIViewController *presentedFSViewController, BOOL completed) {
-            if ([User isLoggedIn]) {
+            if ([XCUser isLoggedIn]) {
                 [weakSelf.delegate finishOnboarding];
             }
         };

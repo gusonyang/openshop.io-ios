@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B1BDD191D65825200320705 /* XCAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1BDD181D65825100320705 /* XCAPIClient.m */; };
+		1B1BDD221D658B7500320705 /* XCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1BDD211D658B7500320705 /* XCUser.m */; };
+		1B1BDD251D6596AC00320705 /* XCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1BDD211D658B7500320705 /* XCUser.m */; };
+		1B1BDD261D65974200320705 /* XCAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1BDD181D65825100320705 /* XCAPIClient.m */; };
 		1B6DB7BE1D644D89003AF00F /* BFOnBoardingSignInController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6DB7BD1D644D89003AF00F /* BFOnBoardingSignInController.m */; };
 		1B8DABE11D640388000272B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B8DABE01D640388000272B0 /* GoogleService-Info.plist */; };
 		1B8DABE91D64096B000272B0 /* BFUMService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DABE81D64096B000272B0 /* BFUMService.m */; };
@@ -320,6 +324,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B1BDD171D65825100320705 /* XCAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XCAPIClient.h; path = "xcshop-api/XCAPIClient.h"; sourceTree = "<group>"; };
+		1B1BDD181D65825100320705 /* XCAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XCAPIClient.m; path = "xcshop-api/XCAPIClient.m"; sourceTree = "<group>"; };
+		1B1BDD201D658B7500320705 /* XCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XCUser.h; path = "xcshop-api/XCUser.h"; sourceTree = "<group>"; };
+		1B1BDD211D658B7500320705 /* XCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XCUser.m; path = "xcshop-api/XCUser.m"; sourceTree = "<group>"; };
 		1B6DB7BC1D644D89003AF00F /* BFOnBoardingSignInController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFOnBoardingSignInController.h; sourceTree = "<group>"; };
 		1B6DB7BD1D644D89003AF00F /* BFOnBoardingSignInController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFOnBoardingSignInController.m; sourceTree = "<group>"; };
 		1B8DABE01D640388000272B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -941,6 +949,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B1BDD161D6581D800320705 /* xcshop-api */ = {
+			isa = PBXGroup;
+			children = (
+				1B1BDD171D65825100320705 /* XCAPIClient.h */,
+				1B1BDD181D65825100320705 /* XCAPIClient.m */,
+				1B1BDD201D658B7500320705 /* XCUser.h */,
+				1B1BDD211D658B7500320705 /* XCUser.m */,
+			);
+			name = "xcshop-api";
+			sourceTree = "<group>";
+		};
 		5B2125561C2C4BFB00B78A9A /* 3rdParty */ = {
 			isa = PBXGroup;
 			children = (
@@ -1369,6 +1388,7 @@
 		72DDF75D16E7485F00887646 /* OpenShop */ = {
 			isa = PBXGroup;
 			children = (
+				1B1BDD161D6581D800320705 /* xcshop-api */,
 				5BA5C4181C14D0A700665664 /* BFAppDelegate.h */,
 				5BA5C4191C14D0A700665664 /* BFAppDelegate.m */,
 				5BA5C4411C14D22D00665664 /* Main.storyboard */,
@@ -1971,7 +1991,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = BF;
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Business-Factory";
 				TargetAttributes = {
@@ -2123,6 +2143,7 @@
 				BB9C26511C4D44FE00272D13 /* BFProductFilterTypeParsingOperation.m in Sources */,
 				BBFF81E31C4BB6D00055A2C6 /* BFProductVariantColor+BFNSelection.m in Sources */,
 				BB2B3D771C46517900FDD1FE /* BFWishlistButtonView.m in Sources */,
+				1B1BDD191D65825200320705 /* XCAPIClient.m in Sources */,
 				5BD993EA1BE7E25D00AE12C0 /* BFFacebookManager.m in Sources */,
 				BBBDC1A41C4264E700B629A4 /* BFProductsFlexibleToolbar.m in Sources */,
 				ADF7CBED1D4909C2003CAE09 /* BFGoogleService.m in Sources */,
@@ -2295,6 +2316,7 @@
 				ADA112781C53D6160057D14A /* BFShippingViewController.m in Sources */,
 				1B6DB7BE1D644D89003AF00F /* BFOnBoardingSignInController.m in Sources */,
 				5B50F05A1C106DA90087725C /* BFDataRequestOrderItemInfo.m in Sources */,
+				1B1BDD221D658B7500320705 /* XCUser.m in Sources */,
 				ADA932221C55081000C5A5EB /* BFOrderSummaryAddressTableViewCellExtension.m in Sources */,
 				AD3938601C5CD20F00447E8A /* BFCart+CoreDataProperties.m in Sources */,
 				5B3812031C0FB0EA0080B106 /* BFAPIRequestCartDiscountInfo.m in Sources */,
@@ -2372,6 +2394,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B1BDD261D65974200320705 /* XCAPIClient.m in Sources */,
+				1B1BDD251D6596AC00320705 /* XCUser.m in Sources */,
 				AD2D32AE1C870C120091AE0E /* OpenShopUITests.swift in Sources */,
 				AD2D32B61C870C2A0091AE0E /* SnapshotHelper.swift in Sources */,
 				AD9BA5D81C88201000221C82 /* XCUIElement+ForceTap.swift in Sources */,
@@ -2565,6 +2589,7 @@
 		AD2D32B31C870C120091AE0E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
@@ -2592,6 +2617,7 @@
 		AD2D32B41C870C120091AE0E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
@@ -2707,6 +2733,7 @@
 		ADE3C5D81C871DB300094A49 /* Testing */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;

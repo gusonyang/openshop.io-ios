@@ -94,7 +94,7 @@ NSString *const kTranslationNewPasswordWasSentToYourEmail  = @"";
 NSString *const kTranslationErrorIncompleteInput           = @"";
 NSString *const kTranslationErrorGeneric                   = @"";
 NSString *const kTranslationErrorFacebookLogin             = @"";
-NSString *const kTranslationErrorInvalidInputEmail         = @"";
+NSString *const kTranslationErrorInvalidInputEmail         = @"不是有效的邮箱地址";
 NSString *const kTranslationInput                          = @"";
 NSString *const kTranslationLoginError                     = @"登录失败";
 NSString *const kTranslationLoginErrorCredentials          = @"密码错误";
@@ -105,7 +105,7 @@ NSString *const kTranslationWoman                          = @"";
 NSString *const kTranslationRegistrationError              = @"";
 NSString *const kTranslationRegistrationErrorCredentials   = @"";
 NSString *const kTranslationRegistering                    = @"";
-NSString *const kTranslationLoggingIn                      = @"";
+NSString *const kTranslationLoggingIn                      = @"登录中...";
 NSString *const kTranslationLoginToOpenShop                = @"";
 NSString *const kTranslationSkip                           = @"跳过";
 
