@@ -12,4 +12,10 @@
 @interface BFOnBoardingSignInController : BFOnboardingContentViewController
 
 
+@property (weak, nonatomic) IBOutlet UIButton *wechatLoginButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *signupButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *signinButton;
+
 @end

@@ -72,8 +72,6 @@
             <string>Roboto-Medium</string>
             <string>Roboto-Medium</string>
             <string>Roboto-Medium</string>
-            <string>Roboto-Medium</string>
-            <string>Roboto-Medium</string>
         </mutableArray>
         <mutableArray key="Roboto-Regular.ttf">
             <string>Roboto-Regular</string>
@@ -599,6 +597,9 @@
                                             <constraint firstAttribute="width" constant="280" id="MMu-2x-rbT"/>
                                         </constraints>
                                         <state key="normal" title="  微信登录" image="wechatlogo" backgroundImage="GreenButton"/>
+                                        <connections>
+                                            <action selector="wechatClick:" destination="JlQ-Wm-dOu" eventType="touchUpInside" id="wVM-Zh-GRH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sqy-WY-4c9">
                                         <rect key="frame" x="320" y="132" width="120" height="40"/>
@@ -609,6 +610,9 @@
                                         <state key="normal" title="登录" backgroundImage="BrownButton">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signinClick:" destination="JlQ-Wm-dOu" eventType="touchUpInside" id="rxM-LR-oC5"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZS-hX-1XW">
                                         <rect key="frame" x="160" y="132" width="120" height="40"/>
@@ -619,6 +623,9 @@
                                         <state key="normal" title="注册" backgroundImage="WhiteButton">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signupClick:" destination="JlQ-Wm-dOu" eventType="touchUpInside" id="JRc-h7-8Ce"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -638,6 +645,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="u7v-6Q-aEI" secondAttribute="trailing" constant="-20" id="abc-qo-O9h"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="signinButton" destination="Sqy-WY-4c9" id="03b-dF-eR0"/>
+                        <outlet property="signupButton" destination="9ZS-hX-1XW" id="R8f-yg-tDN"/>
+                        <outlet property="wechatLoginButton" destination="hFY-cc-Nc9" id="tqt-Ar-ljA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2VP-jZ-ERY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1459,13 +1471,13 @@ kde chcete nakupovat</string>
                         <rect key="frame" x="0.0" y="0.0" width="280" height="280"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zadejte email a heslo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y89-A1-j2M">
-                                <rect key="frame" x="25" y="20" width="210" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y89-A1-j2M">
+                                <rect key="frame" x="25" y="21" width="210" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="8ry-sy-UNn"/>
                                     <constraint firstAttribute="width" constant="220" id="QAs-QX-wtr"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
@@ -1474,11 +1486,10 @@ kde chcete nakupovat</string>
                                     </mask>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S6B-bb-yiX" customClass="BFTextField">
-                                <rect key="frame" x="25" y="61" width="230" height="37"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" background="BlueInput" translatesAutoresizingMaskIntoConstraints="NO" id="S6B-bb-yiX" customClass="BFTextField">
+                                <rect key="frame" x="25" y="62" width="230" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="CTT-fM-zgT"/>
+                                    <constraint firstAttribute="height" constant="40" id="CTT-fM-zgT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
@@ -1491,11 +1502,10 @@ kde chcete nakupovat</string>
                                     <outlet property="delegate" destination="6hJ-nt-XDg" id="3lw-wn-asd"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Heslo" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hyd-MH-mSF" customClass="BFTextField">
-                                <rect key="frame" x="25" y="113" width="230" height="37"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Heslo" minimumFontSize="17" background="BlueInput" translatesAutoresizingMaskIntoConstraints="NO" id="Hyd-MH-mSF" customClass="BFTextField">
+                                <rect key="frame" x="25" y="115" width="230" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="YGb-6Q-k9c"/>
+                                    <constraint firstAttribute="height" constant="40" id="YGb-6Q-k9c"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
@@ -1508,18 +1518,15 @@ kde chcete nakupovat</string>
                                     <outlet property="delegate" destination="6hJ-nt-XDg" id="wYm-bd-wzc"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Joq-ID-191" customClass="BFButton">
-                                <rect key="frame" x="25" y="175" width="230" height="48"/>
-                                <color key="backgroundColor" red="0.93929904699325562" green="0.058065511286258698" blue="0.38389852643013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Joq-ID-191">
+                                <rect key="frame" x="25" y="170" width="230" height="40"/>
                                 <accessibility key="accessibilityConfiguration" label="LOGIN"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="1bF-JU-RCy"/>
+                                    <constraint firstAttribute="height" constant="40" id="1bF-JU-RCy"/>
                                     <constraint firstAttribute="width" constant="224" id="Gf5-RF-hWz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
-                                <state key="normal" title="PŘIHLÁSIT SE">
-                                    <color key="titleColor" red="0.99963909390000005" green="1" blue="0.99975615740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="登录" backgroundImage="BrownButton">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -1530,22 +1537,8 @@ kde chcete nakupovat</string>
                                     <action selector="confirmClicked:" destination="6hJ-nt-XDg" eventType="touchUpInside" id="k3Y-Bn-mkJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p52-GN-gBj" customClass="BFButton">
-                                <rect key="frame" x="25" y="235" width="230" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="afF-Ge-qbE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                                <state key="normal" title="Zapomněli jste heslo?">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeViewClicked:" destination="6hJ-nt-XDg" eventType="touchUpInside" id="MP4-H7-Cw8"/>
-                                </connections>
-                            </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4K-eP-lLk" userLabel="Top spacing">
-                                <rect key="frame" x="130" y="0.0" width="20" height="15"/>
+                                <rect key="frame" x="130" y="0.0" width="20" height="16"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="HOs-s9-PCM"/>
@@ -1558,7 +1551,7 @@ kde chcete nakupovat</string>
                                 </variation>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYr-Jr-6cD" userLabel="Bottom spacing">
-                                <rect key="frame" x="130" y="265" width="20" height="15"/>
+                                <rect key="frame" x="130" y="264" width="20" height="16"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="W2Z-7D-jAG"/>
@@ -1573,7 +1566,7 @@ kde chcete nakupovat</string>
                                 </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gR-8C-ixa" customClass="BFButton">
-                                <rect key="frame" x="237" y="20" width="18" height="22"/>
+                                <rect key="frame" x="237" y="21" width="18" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="18" id="2eO-iy-OJ9"/>
                                     <constraint firstAttribute="height" constant="22" id="xKH-hg-AeF"/>
@@ -1583,13 +1576,27 @@ kde chcete nakupovat</string>
                                     <action selector="closeClicked:" destination="6hJ-nt-XDg" eventType="touchUpInside" id="qne-DA-8bk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p52-GN-gBj" customClass="BFButton">
+                                <rect key="frame" x="25" y="226" width="230" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="afF-Ge-qbE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                <state key="normal" title="Zapomněli jste heslo?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeViewClicked:" destination="6hJ-nt-XDg" eventType="touchUpInside" id="MP4-H7-Cw8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="QYr-Jr-6cD" firstAttribute="centerX" secondItem="SWV-CN-oeo" secondAttribute="centerX" id="0U1-Q3-ygy"/>
-                            <constraint firstItem="p52-GN-gBj" firstAttribute="top" secondItem="Joq-ID-191" secondAttribute="bottom" constant="12" id="0wW-86-8o5"/>
+                            <constraint firstItem="p52-GN-gBj" firstAttribute="top" secondItem="Joq-ID-191" secondAttribute="bottom" constant="16" id="0wW-86-8o5"/>
                             <constraint firstItem="d4K-eP-lLk" firstAttribute="top" secondItem="FgV-xm-u4g" secondAttribute="bottom" id="3Dj-x1-WDf"/>
                             <constraint firstItem="1gR-8C-ixa" firstAttribute="centerY" secondItem="y89-A1-j2M" secondAttribute="centerY" id="42s-iu-4Gt"/>
-                            <constraint firstItem="Joq-ID-191" firstAttribute="top" secondItem="Hyd-MH-mSF" secondAttribute="bottom" constant="25" id="7Hk-AQ-Kcs"/>
+                            <constraint firstItem="Joq-ID-191" firstAttribute="top" secondItem="Hyd-MH-mSF" secondAttribute="bottom" constant="15" id="7Hk-AQ-Kcs"/>
                             <constraint firstAttribute="centerX" secondItem="y89-A1-j2M" secondAttribute="centerX" id="7p9-MB-LB4"/>
                             <constraint firstItem="S6B-bb-yiX" firstAttribute="leading" secondItem="SWV-CN-oeo" secondAttribute="leading" constant="25" id="8zP-Cy-gi0"/>
                             <constraint firstItem="mvK-EV-eqz" firstAttribute="top" secondItem="QYr-Jr-6cD" secondAttribute="bottom" id="9G8-yk-iCV"/>
@@ -1609,12 +1616,12 @@ kde chcete nakupovat</string>
                             <constraint firstItem="Joq-ID-191" firstAttribute="width" secondItem="p52-GN-gBj" secondAttribute="width" id="W9c-dm-VOf"/>
                             <constraint firstAttribute="trailing" secondItem="S6B-bb-yiX" secondAttribute="trailing" constant="25" id="acR-Xs-zet"/>
                             <constraint firstAttribute="trailing" secondItem="Joq-ID-191" secondAttribute="trailing" constant="25" id="f7e-mP-9xf"/>
-                            <constraint firstItem="Hyd-MH-mSF" firstAttribute="top" secondItem="S6B-bb-yiX" secondAttribute="bottom" constant="15" id="fLX-ni-NId"/>
+                            <constraint firstItem="Hyd-MH-mSF" firstAttribute="top" secondItem="S6B-bb-yiX" secondAttribute="bottom" constant="13" id="fLX-ni-NId"/>
                             <constraint firstItem="Hyd-MH-mSF" firstAttribute="leading" secondItem="S6B-bb-yiX" secondAttribute="leading" id="g08-aO-f7s"/>
                             <constraint firstItem="Joq-ID-191" firstAttribute="leading" secondItem="SWV-CN-oeo" secondAttribute="leading" constant="25" id="ghD-U8-BqD"/>
                             <constraint firstItem="1gR-8C-ixa" firstAttribute="leading" secondItem="y89-A1-j2M" secondAttribute="trailing" constant="2" id="jed-XP-4m9"/>
                             <constraint firstItem="p52-GN-gBj" firstAttribute="width" secondItem="Joq-ID-191" secondAttribute="width" id="kgW-oq-asw"/>
-                            <constraint firstItem="QYr-Jr-6cD" firstAttribute="top" secondItem="p52-GN-gBj" secondAttribute="bottom" id="lsU-ga-z8x"/>
+                            <constraint firstItem="QYr-Jr-6cD" firstAttribute="top" secondItem="p52-GN-gBj" secondAttribute="bottom" constant="8" id="lsU-ga-z8x"/>
                             <constraint firstItem="y89-A1-j2M" firstAttribute="top" secondItem="SWV-CN-oeo" secondAttribute="top" constant="29" id="r04-7A-lKF"/>
                             <constraint firstItem="y89-A1-j2M" firstAttribute="top" secondItem="d4K-eP-lLk" secondAttribute="bottom" constant="5" id="tbR-Jq-1cL"/>
                             <constraint firstAttribute="bottom" secondItem="p52-GN-gBj" secondAttribute="bottom" constant="8" id="xYp-tW-SGV"/>
@@ -5486,6 +5493,7 @@ kde chcete nakupovat</string>
         </scene>
     </scenes>
     <resources>
+        <image name="BlueInput" width="6" height="40"/>
         <image name="BrownButton" width="6" height="40"/>
         <image name="ChevronIcon" width="4" height="7"/>
         <image name="ChevronIconBold" width="7" height="12"/>
