@@ -83,12 +83,12 @@ NSString *const kTranslationSlovakLanguage                 = @"";
 /**
  * User's onboarding - login.
  */
-NSString *const kTranslationEnterEmailAndPassword          = @"";
-NSString *const kTranslationDidYouForgetPassword           = @"";
-NSString *const kTranslationLogin                          = @"";
-NSString *const kTranslationPasswordRetrieval              = @"";
-NSString *const kTranslationLoginWithEmail                 = @"";
-NSString *const kTranslationPassword                       = @"";
+NSString *const kTranslationEnterEmailAndPassword          = @"登录";
+NSString *const kTranslationDidYouForgetPassword           = @"忘记密码?";
+NSString *const kTranslationLogin                          = @"登录";
+NSString *const kTranslationPasswordRetrieval              = @"找回密码";
+NSString *const kTranslationLoginWithEmail                 = @"登录";
+NSString *const kTranslationPassword                       = @"密码";
 NSString *const kTranslationPasswordRetrievalInProgress    = @"";
 NSString *const kTranslationNewPasswordWasSentToYourEmail  = @"";
 NSString *const kTranslationErrorIncompleteInput           = @"";
@@ -96,8 +96,8 @@ NSString *const kTranslationErrorGeneric                   = @"";
 NSString *const kTranslationErrorFacebookLogin             = @"";
 NSString *const kTranslationErrorInvalidInputEmail         = @"";
 NSString *const kTranslationInput                          = @"";
-NSString *const kTranslationLoginError                     = @"";
-NSString *const kTranslationLoginErrorCredentials          = @"";
+NSString *const kTranslationLoginError                     = @"登录失败";
+NSString *const kTranslationLoginErrorCredentials          = @"密码错误";
 NSString *const kTranslationRegister                       = @"";
 NSString *const kTranslationDontHaveAnAccount              = @"";
 NSString *const kTranslationMan                            = @"";
@@ -107,7 +107,7 @@ NSString *const kTranslationRegistrationErrorCredentials   = @"";
 NSString *const kTranslationRegistering                    = @"";
 NSString *const kTranslationLoggingIn                      = @"";
 NSString *const kTranslationLoginToOpenShop                = @"";
-NSString *const kTranslationSkip                           = @"";
+NSString *const kTranslationSkip                           = @"跳过";
 
 /**
  * Push notification permissions.
@@ -171,7 +171,7 @@ NSString *const kTranslationShippingAndPayment             = @"";
 NSString *const kTranslationContactInformation             = @"";
 NSString *const kTranslationName                           = @"";
 NSString *const kTranslationNamePlaceholder                = @"";
-NSString *const kTranslationEmail                          = @"";
+NSString *const kTranslationEmail                          = @"手机号";
 NSString *const kTranslationEmailPlaceholder               = @"";
 NSString *const kTranslationPhoneNumber                    = @"";
 NSString *const kTranslationPhoneNumberPlaceholder         = @"";
